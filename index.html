@@ -1,26 +1,53 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
-    <title>Fireboy & Watergirl in The Forest Temple</title>
 
-    <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
 
-    <link href="lib/winjs-4.0.1/css/ui-light.css" rel="stylesheet" />
-    <script src="lib/winjs-4.0.1/js/base.js"></script>
-    <script src="lib/winjs-4.0.1/js/ui.js"></script>
-    <link href="css/default.css" rel="stylesheet" />
-    <script src="js/main.js"></script>
-    <script src="js/ads.js"></script>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fireboy &amp; Watergirl in The Forest Temple</title>
+
+    <meta name="description" content="">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-60x60.png">
+    <link rel="icon" sizes="60x60" href="icon-60x60.png">
+
+    <meta name="apple-mobile-web-app-title" content="Fireboy &amp; Watergirl in The Forest Temple">
 </head>
-<body class="win-type-body">
-    <div id="left_adContainer" style="height:600px;width:160px;z-index:99999;position:fixed;margin:auto;left:0;top:0;"></div>
-    <div style="width:calc(100% - 320px);height:100%; margin:0 auto;">
-        <x-ms-webview id="webview" style="width:100%;height:100%" src="ms-appx-web:///game.html"></x-ms-webview>
+
+<body style="margin: 0px">
+
+    <script type="text/javascript">
+        window.requireNode = window.require;
+        window.require = undefined;
+    </script>
+
+    <!-- build:js scripts/main.js -->
+    <script data-main="js/init" src="bower_components/requirejs/require.js"></script>
+    <!-- endbuild -->
+
+
+
+    <div id="root">
+        <div id="container"></div>
+        <div id="hammer"></div>
+        <div id="debug-fps" style="color:#ff0000; position: absolute; top: 0;"></div>
     </div>
-    <div id="right_adContainer" style="height:600px;width:160px;z-index:99999;position:fixed;margin:auto;right:0;top:0;"></div>
 
 
 </body>
