@@ -1,0 +1,53 @@
+<html lang="ro">
+
+<head>
+   <title>Fireboy and Watergirl</title>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+   <script src="js/socket.io.min.js"></script>
+   <script>
+      const query = window.location.search;
+      const params = new URLSearchParams(query);
+      const username = params.get('username');
+      const room = params.get('room');
+      const socket = io()
+   </script>
+</head>
+
+<body>
+   <canvas id="game" width="780" height="580" style="background-color: black; display: none"></canvas>
+   <div id="chooseChar" style="display: none">
+      <button onclick="
+         socket.emit('chooseFiregirl')
+         this.parentElement.style.display = 'none'
+         me = {character: 'firegirl', image: firegirl, x: 0, y: 0}
+         yo = {character: 'waterboy', image: waterboy, x: 60, y: 60}
+      ">Fireboy</button>
+      <button onclick="
+         socket.emit('chooseWaterboy')
+         this.parentElement.style.display = 'none'
+         me = {character: 'firegirl', image: waterboy, x: 60, y: 60}
+         yo = {character: 'waterboy', image: firegirl, x: 0, y: 0}
+      ">Watergirl</button>
+   </div>
+   <div id="players" style="font-size: x-large"></div>
+   <div id="log" style="display: inline"></div>
+
+   <button id="play" onclick="play()" class="buttons">Play</button>
+   <button id="help" class="buttons">Help</button>
+   <script src="js/collisions.js"></script>
+   <script src="js/game.js"></script>
+WASD TO MOVE<br><a target="_blank" href="https://github.com/tanujdargan/fb-wg">github repository</a><br>
+<label style="position: fixed; right: 19%; left: auto; top: 5px">event</label><input width="12%" id="socketevent" style="position: fixed; right: 0; left: auto; top: 5px">
+<label style="position: fixed; right: 19%; left: auto; top: 35px">msg</label><input width="12%" id="socketmsg" style="position: fixed; right: 0; left: auto; top: 35px">
+   <input type="checkbox" id="socketmsgyes" style="position: fixed; right: 11%; left: auto; top: 55px"><label style="position: fixed; right: 13%; left: auto; top: 55px">with msg</label>
+<button onclick="
+if (document.querySelector('#socketmsgyes').checked)
+   socket.emit(document.querySelector('#socketevent').value, document.querySelector('#socketmsg').value)
+else
+   socket.emit(document.querySelector('#socketevent').value)
+" style="position: fixed; right: 5px; left: auto; top: 60px">socket send</button>
+</body>
+
+</html>

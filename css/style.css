@@ -1,0 +1,18 @@
+.buttons {
+   display: block;
+   margin: 3%;
+   font-size: large;
+}
+
+.player {
+   display: block;
+}
+
+.logmsg {
+   display: block;
+}
+
+.android_button {
+   user-select: none;
+   position: fixed;
+}

@@ -1,0 +1,75 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fireboy &amp; Watergirl in The Forest Temple</title>
+
+    <meta name="description" content="">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-60x60.png">
+    <link rel="icon" sizes="60x60" href="icon-60x60.png">
+
+    <meta name="apple-mobile-web-app-title" content="Fireboy &amp; Watergirl in The Forest Temple">
+</head>
+<!-- Home page (shown when the user is signed out) -->
+<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+<script src="mp.js"></script>
+
+<button onclick="window.location.href = 'solo.html';">HOME</button>
+<button onclick="window.location.href = 'multiplayer.html';">HOME</button>
+<div id="home-page" style="display: none;">
+  <!-- Sign up form -->
+  <form onsubmit="handleSignUp(event)">
+    <label for="email">Email:</label>
+    <input type="email" name="email" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <button type="submit">Sign up</button>
+  </form>
+
+  <!-- Sign in form -->
+  <form onsubmit="handleSignIn(event)">
+    <label for="email">Email:</label>
+    <input type="email" name="email" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <button type="submit">Sign in</button>
+  </form>
+</div>
+
+<div id="game-page" style="display: none;">
+  <!-- Sign out button -->
+  <button id="sign-out-button" style="display: none;" onclick="handleSignOut()">Sign out</button>
+
+  <!-- Game content -->
+  <!-- Game page (shown when the user is signed in) -->
+  <script type="text/javascript">
+    window.requireNode = window.require;
+    window.require = undefined;
+</script>
+
+<!-- build:js scripts/main.js -->
+<script data-main="js/init" src="bower_components/requirejs/require.js"></script>
+<!-- endbuild -->
+
+<div id="root">
+    <div id="container"></div>
+    <div id="hammer"></div>
+    <div id="debug-fps" style="color:#ff0000; position: absolute; top: 0;"></div>
+</div>
+
+  ...
+</div>
