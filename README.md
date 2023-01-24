@@ -4,6 +4,8 @@
 
 #### Multiplayer: [https://dev.to/ably/building-a-realtime-multiplayer-browser-game-in-less-than-a-day-part-1-4-14pm](https://dev.to/ably/building-a-realtime-multiplayer-browser-game-in-less-than-a-day-part-1-4-14pm)
 
+#### Building multiplayer support soon using: https://www.reddit.com/r/javascript/comments/105ecnh/acos_build_and_share_competitive_turnbased/
+
 #### To Play Visit: https://tanujdargan.github.io/fb-wg
 
 ### Features to be added
