@@ -1,4 +1,4 @@
-### Fireboy and Watergirl JS Online Multiplayer for Angie and Mahika
+### Fireboy and Watergirl JS Online Multiplayer
 
 #### Status: Game working, multiplayer pending
 
