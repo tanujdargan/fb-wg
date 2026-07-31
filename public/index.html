@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Ember &amp; Splash</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <section id="screen-lobby" class="screen active">
+      <div class="panel">
+        <h1>Ember &amp; Splash</h1>
+        <p class="tagline">A two-player co-op platformer.</p>
+
+        <label class="field">
+          <span>Your name</span>
+          <input id="lobby-name" type="text" maxlength="16" value="Player" autocomplete="off" />
+        </label>
+
+        <div class="lobby-actions">
+          <button id="btn-create" class="btn btn-primary">Create Room</button>
+          <div class="join-row">
+            <input id="lobby-code" type="text" maxlength="5" placeholder="ROOM CODE" autocomplete="off" />
+            <button id="btn-join" class="btn">Join</button>
+          </div>
+        </div>
+
+        <p id="lobby-status" class="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="screen-charselect" class="screen">
+      <div class="panel">
+        <h2>Choose your character</h2>
+        <div class="char-choices">
+          <button id="choose-fire" class="char-choice char-choice--fire">
+            <span class="char-swatch"></span>
+            Fire
+          </button>
+          <button id="choose-water" class="char-choice char-choice--water">
+            <span class="char-swatch"></span>
+            Water
+          </button>
+        </div>
+        <p id="charselect-status" class="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="screen-game" class="screen">
+      <canvas id="game-canvas" width="780" height="580"></canvas>
+      <p class="controls-hint">You: WASD / Space &nbsp;•&nbsp; Local partner: Arrow keys</p>
+    </section>
+
+    <section id="screen-level-done" class="screen">
+      <div class="panel">
+        <h2>Level Complete!</h2>
+        <p id="level-done-stats" class="status"></p>
+        <button id="btn-next-level" class="btn btn-primary">Continue</button>
+      </div>
+    </section>
+
+    <section id="screen-win" class="screen">
+      <div class="panel">
+        <h2>You Win!</h2>
+        <p>Ember &amp; Splash have escaped together.</p>
+        <button id="btn-restart" class="btn btn-primary">Play Again</button>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

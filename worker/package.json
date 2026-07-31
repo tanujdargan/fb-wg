@@ -1,0 +1,13 @@
+{
+   "name": "fbwg-rooms-worker",
+   "version": "1.0.0",
+   "private": true,
+   "scripts": {
+      "dev": "wrangler dev",
+      "test": "node --test ../tests/room.test.js",
+      "deploy": "wrangler deploy"
+   },
+   "devDependencies": {
+      "wrangler": "^4"
+   }
+}
